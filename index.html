@@ -1,10 +1,92 @@
----
-theme: jekyll-theme-merlot
----
 <!DOCTYPE html>
-<html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Über Mich</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            color: #333;
+            padding: 20px;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        .theme-buttons {
+            margin-bottom: 20px;
+        }
+        .theme-button {
+            padding: 10px 20px;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-right: 10px;
+        }
+        .dark-purple-theme {
+            background-color: #6a0dad;
+            color: #fff;
+        }
+        .black-theme {
+            background-color: #333;
+            color: #fff;
+        }
+        .social-buttons {
+            margin-top: 20px;
+        }
+        .social-button {
+            display: inline-block;
+            padding: 10px 15px;
+            font-size: 20px;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-right: 10px;
+        }
+        .social-button.facebook {
+            background-color: #3b5998;
+        }
+        .social-button.twitter {
+            background-color: #1da1f2;
+        }
+        .social-button.linkedin {
+            background-color: #0077b5;
+        }
+    </style>
+</head>
 <body>
-<h1>Hello World</h1>
-<p>sda</p>
+    <div class="container">
+        <h1>Über mich</h1>
+        <p>Hallo, ich bin Tixmix. Ich lerne gerade 3D-Modellierung und Backend-Entwicklung.</p>
+        <div class="theme-buttons">
+            <button class="theme-button dark-purple-theme" onclick="changeTheme('dark-purple')">Dunkel-lila Theme</button>
+            <button class="theme-button black-theme" onclick="changeTheme('black')">Schwarzes Theme</button>
+        </div>
+        <div class="social-buttons">
+            <a href="#" class="social-button facebook">Facebook</a>
+            <a href="#" class="social-button twitter">Twitter</a>
+            <a href="#" class="social-button linkedin">LinkedIn</a>
+        </div>
+    </div>
+
+    <script>
+        function changeTheme(theme) {
+            const body = document.querySelector('body');
+            if (theme === 'dark-purple') {
+                body.style.backgroundColor = '#6a0dad';
+                body.style.color = '#fff';
+            } else if (theme === 'black') {
+                body.style.backgroundColor = '#333';
+                body.style.color = '#fff';
+            }
+        }
+    </script>
 </body>
 </html>
