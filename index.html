@@ -19,36 +19,34 @@
             border-radius: 10px;
             box-shadow: 0 0 10px rgba(0,0,0,0.1);
         }
-        .theme-buttons {
-            margin-bottom: 20px;
+        h1 {
+            margin-top: 0;
         }
         .theme-button {
-            padding: 10px 20px;
-            font-size: 16px;
+            padding: 5px 10px;
+            font-size: 14px;
             border: none;
             border-radius: 5px;
             cursor: pointer;
-            margin-right: 10px;
+            margin-bottom: 5px;
         }
-        .dark-purple-theme {
-            background-color: #6a0dad;
-            color: #fff;
-        }
-        .black-theme {
-            background-color: #333;
-            color: #fff;
+        .theme-buttons {
+            float: right;
         }
         .social-buttons {
-            margin-top: 20px;
+            margin-top: 10px;
         }
         .social-button {
-            display: inline-block;
-            padding: 10px 15px;
-            font-size: 20px;
+            display: block;
+            padding: 5px 10px;
+            font-size: 14px;
             color: #fff;
             text-decoration: none;
             border-radius: 5px;
-            margin-right: 10px;
+            margin-bottom: 5px;
+        }
+        .social-button:last-child {
+            margin-bottom: 0;
         }
         .social-button.facebook {
             background-color: #3b5998;
@@ -64,16 +62,14 @@
 <body>
     <div class="container">
         <h1>Über mich</h1>
-        <p>Hallo, ich bin Tixmix. Ich lerne gerade 3D-Modellierung und Backend-Entwicklung.</p>
-        <div class="theme-buttons">
-            <button class="theme-button dark-purple-theme" onclick="changeTheme('dark-purple')">Dunkel-lila Theme</button>
-            <button class="theme-button black-theme" onclick="changeTheme('black')">Schwarzes Theme</button>
-        </div>
+        <button class="theme-button" onclick="changeTheme('dark-purple')">Dunkel-lila Theme</button>
+        <button class="theme-button" onclick="changeTheme('black')">Schwarzes Theme</button>
         <div class="social-buttons">
             <a href="#" class="social-button facebook">Facebook</a>
             <a href="#" class="social-button twitter">Twitter</a>
             <a href="#" class="social-button linkedin">LinkedIn</a>
         </div>
+        <p>Hallo, ich bin Tixmix. Ich lerne gerade 3D-Modellierung und Backend-Entwicklung.</p>
     </div>
 
     <script>
